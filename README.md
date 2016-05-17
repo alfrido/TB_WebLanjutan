@@ -1,6 +1,6 @@
 # TB_WebLanjutan
 Goal : Membangun Web dengan Menggunakan API dan Java Script
-Desc : Tugas Proyek.docx
+- Desc : Tugas Proyek.docx
 
 #Rancangan Web
 - Nama Website : PunyaMahasiswa.com
