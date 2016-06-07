@@ -1,0 +1,119 @@
+<html>
+<head>
+	<title>REGISTER</title>
+	<link rel="stylesheet" type="text/css" href="style/register.css">
+	<style type="text/css">
+		body{
+			width: 600px;
+			margin: 0 auto;
+		}
+
+		form{
+			margin-top: 10px;
+			border-style: groove;
+		}
+		caption{
+			font-size: 250%;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		p{
+			font-weight: bold;
+			margin-left: 25px;
+		}
+		footer{
+			text-align: center;
+			padding-top: 10px;
+			height: 35px;
+		}
+		table{
+			margin: 20px;
+		}
+		td#label{
+			width: 105px;
+		}
+		#email,#katasandi,#re-katasandi,#username{
+			width: 422px;
+		}
+		#namadepan,#namabelakang{
+			width: 150px;
+		}
+		span{
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+	<form action="#" method="post">
+		<content>
+			<table>
+				<caption><img src="image/logo.ico">    REGISTER</caption>
+				<tr>
+					<td id="label">
+						<label for="namadepan">Nama Depan</label>
+					</td>
+					<td>
+						: <input type="text" name="namadepan" id="namadepan">
+					</td>
+					<td id="label">
+						<label for="namabelakang">Nama Belakang</label>
+					</td>
+					<td>
+						: <input type="text" name="namabelakang" id="namabelakang">
+					</td>
+				</tr>
+				<tr>
+					<td id="label">
+						<label for="username">Username</label>
+					</td>
+					<td colspan="3">
+						: <input type="text" name="username" id="username">
+					</td>
+				</tr>
+				<tr>
+					<td id="label">
+						<label for="email">Email Anda</label>
+					</td>
+					<td colspan="3">
+						: <input type="text" name="email" id="email">
+					</td>
+				</tr>
+				<tr>
+					<td id="label">
+						<label for="password">Kata Sandi</label>
+					</td>
+					<td colspan="3">
+						: <input type="password" name="katasandi" id="katasandi">
+					</td>
+				</tr>
+					<td id="label">
+						<label for="re-password">Ulangi Kata Sandi</label>
+					</td>
+					<td colspan="3">
+						: <input type="password" name="re-katasandi" id="re-katasandi">
+					</td>
+				</tr>
+				</tr>
+					<td id="label">
+						<label for="jeniskelamin">Jenis Kelamin</label>
+					</td>
+					<td colspan="3">
+						: <input type="radio" name="jk" value="Laki-Laki">Laki-Laki
+						<input type="radio" name="jk" value="Perempuan">Perempuan
+					</td>
+				</tr>
+			</table>
+			<p style="font-weight:normal;">
+				<input type="checkbox" name="rule" value="agree">
+				Dengan mengkilik mendaftar, Anda menyetujui <span>Ketentuan</span>
+				kami dan bahwa<br>Anda telah membaca <span>Kebijakan</span> Penggunaan Data,
+				termasuk <span>Penggunaan Cookie</span>
+			</p>
+		</content>
+		<footer>
+			<input type="button" value="Mendaftar">
+			<input type="reset">
+		</footer>	
+	</form>
+</body>
+</html>
