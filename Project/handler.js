@@ -1,10 +1,20 @@
-var handler, index;
+var moment = require('moment'),
+	handler, 
+	home;
 
-index = function(req,res){
-	res.render('index.html');
+home = function(req, res){
+	res.render('indek.html');
 };
+fb = function(req, res){
+	res.render('fb.html');
+};
+
+
 
 handler = {
-	index:index
+	home: home,
+	fb: fb
+	
 };
+
 module.exports = handler;

@@ -1,20 +1,11 @@
 {
-  "name": "punyamahasiswa",
+  "name": "tugas",
   "version": "1.0.0",
-  "description": "",
+  "description": "tugasweb",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "angular-route": "^1.5.5",
-    "ejs": "^2.4.1",
-    "express": "^4.13.4",
-    "mysql": "^2.10.2",
-    "nunjucks": "^2.4.2",
-    "router": "^1.1.4",
-    "static": "^2.0.0"
-  }
+  "author": "fachry",
+  "license": "ISC"
 }

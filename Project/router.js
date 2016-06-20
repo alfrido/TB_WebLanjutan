@@ -3,8 +3,9 @@ var express = require('express'),
 	h = require('./handler'),
 	router;
 
-	router =  function(app){
-		r.get('/', h.index);
-		app.use(r);
-	};
-	module.exports = router;
+router = function(app){
+	r.get('/', h.home);
+	r.get('/fb', h.fb);
+	app.use(r);
+};
+module.exports = router;
