@@ -1,6 +1,7 @@
 var moment = require('moment'),
 	handler, 
-	home;
+	home,
+	admin;
 
 home = function(req, res){
 	res.render('indek.html');
@@ -8,12 +9,16 @@ home = function(req, res){
 fb = function(req, res){
 	res.render('fb.html');
 };
+admin = function(req, res){
+	res.render('template/admin/index.html');
+}
 
 
 
 handler = {
 	home: home,
-	fb: fb
+	fb: fb,
+	admin:admin
 	
 };
 

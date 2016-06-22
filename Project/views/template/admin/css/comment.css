@@ -1,0 +1,13 @@
+.comments-row{
+	margin-bottom: 30px;
+}
+.comments-age{
+	font-size: 12px;
+}
+.comments-small{
+	margin-top: 10px;
+}
+.btn-default{
+	color: #1ab394;
+	border: 1px #eee solid;
+}
