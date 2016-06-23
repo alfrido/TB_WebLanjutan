@@ -7,5 +7,22 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "fachry",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "moment": "^2.12.0",
+    "nunjucks": "^2.4.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alfrido/TB_WebLanjutan.git"
+  },
+  "keywords": [
+    "tb_weblanjutan"
+  ],
+  "bugs": {
+    "url": "https://github.com/alfrido/TB_WebLanjutan/issues"
+  },
+  "homepage": "https://github.com/alfrido/TB_WebLanjutan#readme"
 }
