@@ -30,16 +30,39 @@ film=function(req, res){
 berita=function(req, res){
 	res.render('berita.html');
 };
+approved = function(req, res){
+	res.render('template/admin/approved.html');
+}
 admin = function(req, res){
 	res.render('template/admin/index.html');
 }
-
+articlebaru = function(req, res){
+	res.render('template/admin/new-article.html');
+}
+articles = function(req, res){
+	res.render('template/admin/articles.html');
+}
+next = function(req, res){
+	res.render('template/admin/next.html');
+}
+tags = function(req, res){
+	res.render('template/admin/tags.html');
+}
+unapproved = function(req, res){
+	res.render('template/admin/unapproved.html');
+}
 
 
 handler = {
 	home: home,
 	fb: fb,
+	next:next ,
+	tags:tags ,
+	approved:approved,
 	admin:admin,
+	articlebaru:articlebaru,
+	articles:articles,
+	unapproved:unapproved,
 	tekno:tekno,
 	lowongan:lowongan,
 	infomhs:infomhs,

@@ -14,6 +14,12 @@ router = function(app){
 	r.get('/tekno', h.tekno);
 	r.get('/lowongan', h.lowongan);
 	r.get('/admin',h.admin);
+	r.get('/approved',h.approved);
+	r.get('/articles',h.articles);
+	r.get('/articlebaru',h.articlebaru);
+	r.get('/tags',h.tags);
+	r.get('/next',h.next);
+	r.get('/unapproved',h.unapproved);
 	app.use(r);
 };
 module.exports = router;
