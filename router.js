@@ -6,7 +6,9 @@ var express = require('express'),
 router = function(app){
 	r.get('/', h.home);
 	r.get('/fb', h.fb);
+	r.get('/test', h.test);
 	r.get('/berita', h.berita);
+	r.get('/rm1berita', h.rm1berita);
 	r.get('/tips', h.tips);
 	r.get('/infomhs', h.infomhs);
 	r.get('/musik', h.musik);
@@ -20,8 +22,6 @@ router = function(app){
 	r.get('/tags',h.tags);
 	r.get('/next',h.next);
 	r.get('/unapproved',h.unapproved);
-	r.get('/komentar',h.komentar);
-	r.get('/setting', h.setting);
 	app.use(r);
 };
 module.exports = router;

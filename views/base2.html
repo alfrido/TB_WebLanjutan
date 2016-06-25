@@ -42,7 +42,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/"><img src="img/icon.ico" height="25px"></a>
+                <a class="navbar-brand" href="#"><img src="img/icon.ico" height="25px"></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -101,40 +101,11 @@
                 <img class="img-responsive" src="{% block img1 %}{% endblock %}" width="900px" height="300px" alt="">
                 <hr>
                 <p>{% block isi1 %}{% endblock %}</p>
-                <a class="btn btn-primary" href="{% block rm %}{% endblock %}">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+                
 
                 <hr>
 
-                <!-- Second Blog Post -->
-                <h2>
-                    <a href="#">{% block judul2 %}{% endblock %}</a>
-                </h2>
-                <p class="lead">
-                    by <a href="index.php">{% block author2 %}{% endblock %}</a>
-                </p>
-                <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:45 PM</p>
-                <hr>
-                <img class="img-responsive" src="{% block img2 %}{% endblock %}" width="900px" height="300px" alt="">
-                <hr>
-                <p>{% block isi2 %}{% endblock %}</p>
-                <a class="btn btn-primary" href="{% block rm2 %}{% endblock %}">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
-
-                <hr>
-
-                <!-- Third Blog Post -->
-                <h2>
-                    <a href="#">{% block judul3 %}{% endblock %}</a>
-                </h2>
-                <p class="lead">
-                    by <a href="index.php">{% block author3 %}{% endblock %}</a>
-                </p>
-                <p><span class="glyphicon glyphicon-time"></span> Posted on november 28, 2013 at 10:45 PM</p>
-                <hr>
-                <img class="img-responsive" src="{% block img3 %}{% endblock %}" width="900px" height="300px" alt="">
-                <hr>
-                <p>{% block isi3 %}{% endblock %}</p>
-                <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
-
+               
                 <hr>
 
                 <!-- Pager -->
@@ -199,8 +170,8 @@
 
                 <!-- Side Widget Well -->
                 <div class="well">
-                    <h4>Visi & Misi</h4>
-                    <p>Sebuah Web untuk menyajikan berita terbaru dan terpercaya,dimana kita bisa berdiskusi di dalamnya</p>
+                    <h4>Side Widget Well</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
                 </div>
 
             </div>
@@ -209,6 +180,28 @@
         <!-- /.row -->
 
         <hr>
+        <div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+  
+    var disqus_config = function () {
+        this.page.url = cintaku21.herokuapp.com;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = cintaku21.disqus.com; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        
+        s.src = '//cintaku21.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
         <!-- Footer -->
         <footer>

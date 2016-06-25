@@ -1,14 +1,7 @@
 var moment = require('moment'),
 	handler, 
 	home,
-	admin,
-	articlebaru,
-	articles,
-	approved,
-	unapproved,
-	komentar,
-	tags,
-	setting
+	admin;
 
 home = function(req, res){
 	res.render('indek.html');
@@ -37,34 +30,33 @@ film=function(req, res){
 berita=function(req, res){
 	res.render('berita.html');
 };
+rm1berita=function(req, res){
+	res.render('rm1berita.html');
+};
 approved = function(req, res){
 	res.render('template/admin/approved.html');
-};
+}
 admin = function(req, res){
 	res.render('template/admin/index.html');
-};
+}
 articlebaru = function(req, res){
 	res.render('template/admin/new-article.html');
-};
+}
 articles = function(req, res){
 	res.render('template/admin/articles.html');
-};
+}
 next = function(req, res){
 	res.render('template/admin/next.html');
-};
+}
 tags = function(req, res){
 	res.render('template/admin/tags.html');
-};
+}
 unapproved = function(req, res){
 	res.render('template/admin/unapproved.html');
-};
-komentar = function(req, res){
-	res.render('template/admin/commenters.html');
-};
-setting = function(req, res){
-	res.render('template/admin/setting.html');
-};
-
+}
+test= function(req, res){
+	res.render('mongotest.html');
+}
 
 
 handler = {
@@ -84,9 +76,8 @@ handler = {
 	tips:tips,
 	film:film,
 	berita:berita,
-	komentar:komentar,
-	setting:setting
-
+	rm1berita:rm1berita,
+	test:test
 
 	
 };
