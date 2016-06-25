@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{% block title %}{% endblock %}</title>
+		<script src="/vendor/js/jquery.min.js"></script>
+		<script src="/vendor/js/bootstrap.min.js"></script>
+		<link href="/vendor/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="content">
+			{% block content %}
+			{% endblock %}
+		</div>
+		{% block script %}{% endblock %}
+	</body>
+</html>

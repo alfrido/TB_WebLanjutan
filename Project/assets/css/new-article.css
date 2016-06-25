@@ -1,0 +1,14 @@
+.form-wrapper{
+	background-color: #eee;
+	padding: 20px;
+}
+.sr-only{
+	width: 90px;
+}
+.note-editable{
+	background-color: #fff;
+}
+#content .page_title{
+	 padding-top: 10px;
+	 font-size: 20px;	 
+}
