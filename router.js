@@ -25,7 +25,7 @@ router = function(app){
 	r.get('/commenters',h.commenters);
 	r.get('/setting',h.setting);
 	r.get('/login', h.login);
-	r.get('/home', h.home);
+	r.get('/home', h.home1);
 	app.use(r);
 };
 module.exports = router;

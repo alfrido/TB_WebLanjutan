@@ -71,8 +71,8 @@ commenters = function(req, res){
 login = function(req, res){
 	res.render('template/admin/login.html');
 };
-home= function(req, res){
-	res.render('template/admin/home.html');
+home1= function(req, res){
+	res.render('template/admin/homeadmin.html');
 };
 
 
@@ -98,7 +98,7 @@ handler = {
 	commenters:commenters,
 	setting:setting,
 	login:login,
-	home:home
+	home1:home1
 	
 };
 
