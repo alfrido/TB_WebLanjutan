@@ -33,6 +33,9 @@ berita=function(req, res){
 rm1berita=function(req, res){
 	res.render('rm1berita.html');
 };
+rm2berita=function(req, res){
+	res.render('rm2berita.html');
+};
 approved = function(req, res){
 	res.render('template/admin/approved.html');
 }
@@ -77,7 +80,8 @@ handler = {
 	film:film,
 	berita:berita,
 	rm1berita:rm1berita,
-	test:test
+	test:test,
+	rm2berita:rm2berita
 
 	
 };
