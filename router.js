@@ -22,6 +22,10 @@ router = function(app){
 	r.get('/tags',h.tags);
 	r.get('/next',h.next);
 	r.get('/unapproved',h.unapproved);
+	r.get('/commenters',h.commenters);
+	r.get('/setting',h.setting);
+	r.get('/login', h.login);
+	r.get('/home', h.home);
 	app.use(r);
 };
 module.exports = router;
