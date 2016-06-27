@@ -29,8 +29,16 @@
     function login() {
       FB.login(function(response) {
         if (response.status === 'connected') {
-            document.getElementById('status').innerHTML = 'We are connected.';
-            document.getElementById('login').style.visibility = 'hidden';
+           /* document.getElementById('status').innerHTML = 'We are connected.';
+            document.getElementById('login').style.visibility = 'hidden';*/
+      FB.api('/me', 'GET', {fields: 'birthday,email,id,religion,gender,name,about,picture.width(150).height(150)'}, function(response) {
+        document.getElementById('status').innerHTML = "<img src='" + response.picture.data.url+ "'>" ,
+        document.getElementById('nama').value=response.name,
+        document.getElementById('gender').value=response.gender,
+
+        document.getElementById('fb_id').value=response.id;
+
+      });
           } else if (response.status === 'not_authorized') {
             document.getElementById('status').innerHTML = 'We are not logged in.'
           } else {
@@ -40,10 +48,13 @@
     }
     
     function getInfo() {
-      FB.api('/me', 'GET', {fields: 'birthday,email,id,religion,gender,name,about,picture.width(150).height(150)'}, function(response) {
-        document.getElementById('status').innerHTML = "<img src='" + response.picture.data.url + "'>"+"</br>"+"name:"+response.name+"</br>gender:"+response.gender +"</br>about:"+response.religion ;
+        FB.api('/me', 'GET', {fields: 'birthday,email,id,religion,gender,name,about,picture.width(150).height(150)'}, function(response) {
+        document.getElementById('status').innerHTML = "<img src='" + response.picture.data.url+ "'>" ,
+        document.getElementById('nama').value=response.name,
+        document.getElementById('gender').value=response.gender,
 
-      });
+        document.getElementById('fb_id').value=response.id;  });
+
     }
     function post() {
       FB.api('/me/feed', 'post', {message: 'my first status...'}, function(response) {
@@ -55,4 +66,5 @@
         document.getElementById('status').innerHTML = response.id;
       });
     }
+
    

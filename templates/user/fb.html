@@ -11,11 +11,27 @@
   data-show-faces="true">
 </div>
 
+
  <script type="text/javascript" src="js/fb.js"/></script>
   <div id="status"></div>
-  <button onclick="getInfo()">tampil profile</button>
-  <button onclick="post()">Post</button>
-  <button onclick="login()" id="login">Login</button>
-  <button onclick="shareLink()">Share Link</button>
+  
+  <br>
+  <form >
+    <br>
+  Nama:<input type="text" name="nama" id="nama" readonly="true">
+  Id:<input type="text" name="fb_id" id="fb_id"  readonly="true"><br><br>
+  Gender:<input type="text" name="fb_id" id="gender"  ><br><br>
+
+
+  <br><br>
+  <a href="/" ><button > Sesuai</button></a>
+</form>
+<br>
+  <button onclick="getInfo()">Load</button>
+<br>
+
+ <button onclick="login()" id="login">Login</button>
+
+
 </body>
 </html>

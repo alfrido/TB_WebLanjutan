@@ -41,6 +41,24 @@ rm2berita=function(req, res){
 rm3berita=function(req, res){
 	res.render('./user/rm3berita.html');
 };
+rm1film=function(req, res){
+	res.render('./user/rm1film.html');
+};
+rm2film=function(req, res){
+	res.render('./user/rm2film.html');
+};
+rm3film=function(req, res){
+	res.render('./user/rm3film.html');
+};
+rm1info=function(req, res){
+	res.render('./user/rm1info.html');
+};
+rm2info=function(req, res){
+	res.render('./user/rm2info.html');
+};
+rm3info=function(req, res){
+	res.render('./user/rm3info.html');
+};
 
 /*login = function(req, res){
 	user = req.session.user || "";
@@ -78,7 +96,13 @@ handler = {
 	berita:berita,
 	rm1berita:rm1berita,
 	rm2berita:rm2berita,
-	rm3berita:rm3berita
+	rm3berita:rm3berita,
+	rm1film:rm1film,
+	rm2film:rm2film,
+	rm3film:rm3film,
+	rm1info:rm1info,
+	rm2info:rm2info,
+	rm3info:rm3info
 	/*login: login,
 	check: check*/
 };
