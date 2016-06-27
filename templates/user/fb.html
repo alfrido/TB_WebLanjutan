@@ -16,7 +16,7 @@
   <div id="status"></div>
   
   <br>
-  <form >
+  <form method="post" action="/save" >
     <br>
   Nama:<input type="text" name="nama" id="nama" readonly="true">
   Id:<input type="text" name="fb_id" id="fb_id"  readonly="true"><br><br>
@@ -24,7 +24,7 @@
 
 
   <br><br>
-  <a href="/" ><button > Sesuai</button></a>
+    <button type="submit">Submit</button>
 </form>
 <br>
   <button onclick="getInfo()">Load</button>

@@ -9,13 +9,23 @@ var express = require('express'),
 	router;
 
 
-MongoClient.connect('mongodb://data:12345@ds023634.mlab.com:23634/tenomed', (err, database) => {
+MongoClient.connect('mongodb://user1:user1@ds023213.mlab.com:23213/projectfahridb', (err, database) => {
   	if (err) return console.log(err)
   	db = database;
 })
 
 router = function(app){
 	r.get('/admin',h.admin);
+
+	r.post('/save',
+		(req, res) => {
+			db.collection('data').save(req.body,(err, result) => {
+				if (err) return console.log(err);
+				//renders index.ejs
+				console.log('saved to database');
+				res.redirect('/');
+			})
+		});
 	r.get('/approved',h.approved);
 	r.get('/articles',h.articles);
 	r.get('/articlebaru',h.articlebaru);
