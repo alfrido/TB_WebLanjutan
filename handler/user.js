@@ -14,6 +14,12 @@ tekno=function(req, res){
 rm1tekno=function(req, res){
 	res.render('./user/rm1tekno.html');
 };
+rm2tekno=function(req, res){
+	res.render('./user/rm2tekno.html');
+};
+rm3tekno=function(req, res){
+	res.render('./user/rm3tekno.html');
+};
 lowongan=function(req, res){
 	res.render('./user/lowongan.html');
 };
@@ -59,6 +65,33 @@ rm2info=function(req, res){
 rm3info=function(req, res){
 	res.render('./user/rm3info.html');
 };
+rm1kerja=function(req, res){
+	res.render('./user/rm1kerja.html');
+};
+rm2kerja=function(req, res){
+	res.render('./user/rm2kerja.html');
+};
+rm3kerja=function(req, res){
+	res.render('./user/rm3kerja.html');
+};
+rm1musik=function(req, res){
+	res.render('./user/rm1musik.html');
+};
+rm2musik=function(req, res){
+	res.render('./user/rm2musik.html');
+};
+rm3musik=function(req, res){
+	res.render('./user/rm3musik.html');
+};
+rm1tips=function(req, res){
+	res.render('./user/rm1tips.html');
+};
+rm2tips=function(req, res){
+	res.render('./user/rm2tips.html');
+};
+rm3tips=function(req, res){
+	res.render('./user/rm3tips.html');
+};
 
 /*login = function(req, res){
 	user = req.session.user || "";
@@ -88,6 +121,8 @@ handler = {
 	fb: fb,
 	tekno:tekno,
 	rm1tekno:rm1tekno,
+	rm2tekno:rm2tekno,
+	rm3tekno:rm3tekno,
 	lowongan:lowongan,
 	infomhs:infomhs,
 	musik:musik,
@@ -102,7 +137,16 @@ handler = {
 	rm3film:rm3film,
 	rm1info:rm1info,
 	rm2info:rm2info,
-	rm3info:rm3info
+	rm3info:rm3info,
+	rm1kerja:rm1kerja,
+	rm2kerja:rm2kerja,
+	rm3kerja:rm3kerja,
+	rm1musik:rm1musik,
+	rm2musik:rm2musik,
+	rm3musik:rm3musik,
+	rm1tips:rm1tips,
+	rm2tips:rm2tips,
+	rm3tips:rm3tips
 	/*login: login,
 	check: check*/
 };
