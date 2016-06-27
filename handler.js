@@ -1,7 +1,11 @@
 var moment = require('moment'),
 	handler, 
 	home,
-	admin;
+	admin,
+	commenters,
+	setting,
+	login;
+	home;
 
 home = function(req, res){
 	res.render('indek.html');
@@ -10,6 +14,9 @@ fb = function(req, res){
 	res.render('fb.html');
 };
 tekno=function(req, res){
+	res.render('tekno.html');
+};
+rm1tekno=function(req, res){
 	res.render('tekno.html');
 };
 lowongan=function(req, res){
@@ -38,28 +45,41 @@ rm2berita=function(req, res){
 };
 approved = function(req, res){
 	res.render('template/admin/approved.html');
-}
+};
 admin = function(req, res){
 	res.render('template/admin/index.html');
-}
+};
 articlebaru = function(req, res){
 	res.render('template/admin/new-article.html');
-}
+};
 articles = function(req, res){
 	res.render('template/admin/articles.html');
-}
+};
 next = function(req, res){
 	res.render('template/admin/next.html');
-}
+};
 tags = function(req, res){
 	res.render('template/admin/tags.html');
-}
+};
 unapproved = function(req, res){
 	res.render('template/admin/unapproved.html');
-}
+};
 test= function(req, res){
 	res.render('mongotest.html');
-}
+};
+
+setting = function(req, res){
+	res.render('template/admin/setting.html');
+};
+commenters = function(req, res){
+	res.render('template/admin/commenters.html');
+};
+login = function(req, res){
+	res.render('template/admin/login.html');
+};
+home1= function(req, res){
+	res.render('template/admin/homeadmin.html');
+};
 
 
 handler = {
@@ -80,9 +100,18 @@ handler = {
 	film:film,
 	berita:berita,
 	rm1berita:rm1berita,
-	test:test,
 	rm2berita:rm2berita
+	test:test,
+	rm1tekno:rm1tekno
+<<<<<<< HEAD
 
+
+=======
+	commenters:commenters,
+	setting:setting,
+	login:login,
+	home1:home1
+>>>>>>> b58605230a235ae36bd3c6c881640e35ffb9d79a
 	
 };
 

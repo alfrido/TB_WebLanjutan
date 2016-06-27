@@ -15,6 +15,7 @@ router = function(app){
 	r.get('/musik', h.musik);
 	r.get('/film', h.film);	
 	r.get('/tekno', h.tekno);
+	r.get('/rm1tekno', h.rm1tekno);
 	r.get('/lowongan', h.lowongan);
 	r.get('/admin',h.admin);
 	r.get('/approved',h.approved);
@@ -23,6 +24,10 @@ router = function(app){
 	r.get('/tags',h.tags);
 	r.get('/next',h.next);
 	r.get('/unapproved',h.unapproved);
+	r.get('/commenters',h.commenters);
+	r.get('/setting',h.setting);
+	r.get('/login', h.login);
+	r.get('/home', h.home1);
 	app.use(r);
 };
 module.exports = router;
