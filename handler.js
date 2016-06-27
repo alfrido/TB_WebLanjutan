@@ -43,6 +43,9 @@ rm1berita=function(req, res){
 rm2berita=function(req, res){
 	res.render('rm2berita.html');
 };
+rm3berita=function(req, res){
+	res.render('rm2berita.html');
+};
 approved = function(req, res){
 	res.render('template/admin/approved.html');
 };
@@ -102,7 +105,7 @@ handler = {
 	rm1berita:rm1berita,
 	rm2berita:rm2berita
 	test:test,
-	rm1tekno:rm1tekno
+	rm3berita:rm3berita
 <<<<<<< HEAD
 
 

@@ -10,6 +10,7 @@ router = function(app){
 	r.get('/berita', h.berita);
 	r.get('/rm1berita', h.rm1berita);
 	r.get('/rm2berita', h.rm2berita);
+	r.get('/rm3berita', h.rm3berita);
 	r.get('/tips', h.tips);
 	r.get('/infomhs', h.infomhs);
 	r.get('/musik', h.musik);
