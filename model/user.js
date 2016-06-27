@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-mongoose.connect('mongodb://data:12345@ds023634.mlab.com:23634/tenomed');
+mongoose.connect('mongodb://user1:user1@ds023213.mlab.com:23213/projectfahridb');
 
 var userSchema = new Schema({
   user_id             : { type: String, required: true, unique: true },
