@@ -10,7 +10,7 @@ router = function(app){
 				if (err) return console.log(err);
 				//renders index.ejs
 				console.log('saved to database');
-				res.redirect('/');
+				res.redirect('/profile');
 			})
 		});
 	r.get('/', h.home);

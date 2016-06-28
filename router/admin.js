@@ -36,6 +36,11 @@ router = function(app){
 				res.redirect('/home');
 			})
 		});
+
+	r.get('/Edit/:id', h.EditArticle);
+	r.post('/Edit',h.edit);
+	r.delete('/delete/:id', h.deleteArticle);
+
 	app.get('/home', (req, res) => {
   db.collection('Article').find().toArray((err, result) => {
     if (err) return console.log(err)

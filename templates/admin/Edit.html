@@ -5,13 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-        <title>Admin</title>
+    <title>Edit Article</title>
 
     <!-- Bootstrap -->
-    
+    <link rel="stylesheet" type="text/css" href="choosen/chosen.css">
+    <link rel="stylesheet" type="text/css" href="summernote/summernote-master/dist/summernote.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome-4.5.0/css/font-awesome.css">
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="css/new-article.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -21,7 +23,8 @@
     <![endif]-->
   </head>
   <body>
-    <div class="container-fluid display-table">
+
+   <div class="container-fluid display-table">
       <div class="row display-table-row">
         <div class="col-md-2 col-sm-1 hidden-xs display-table-cell valign-top" id="side-menu">
           <h1 class="hidden-xs hidden-sm">Navigation</h1>
@@ -66,7 +69,7 @@
           </li>
 
            <li class="link">
-            <a href="/commenters">
+            <a href="/komentar">
               <span class="glyphicon glyphicon-user" aria-control="true"></span>
               <span class="hidden-xs hidden-sm">Commenters</span>
             </a>
@@ -86,7 +89,7 @@
             </a>
           </li>
           </ul>
-        
+
         </div>
         <div class="col-md-10 col-sm-11 display-table-cell valign-top box">
         <div class="row">
@@ -120,58 +123,57 @@
                 </li>
 
                  <li>
-                  <a href="/admin" class="logout">
+                  <a href="#" class="logout">
                     <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
                     log out
                   </a>
                 </li>
-
-           
               </ul>
             </div>
           </header>
         </div>
 
-        <div id="dashboard-con">
-          <div class="col-md-6 dashboard-left-cell">
-            <div class="admin-content-con">
-              <header class="clearfix">
-                <h5 class="pull-left">Articles</h5>
-                <a href="#" class="btn btn-xs btn-primary pull-right" role="button">Create new article</a>
-              </header>
-              <table class="table table-striped">
-                <thead>
+        <div id="content">
+          <header>
+            <h2 class="page_title">Edit article</h2>
+          </header>
 
-                  <tr>
-                    <th>title</th>
-                    <th>replies</th>
-                    <th>date</th>
-                    <th>actioins</th>
+          <div class="content-inner">
+            <div class="form-wrapper">
+              <form method="post" action="/Edit">
+                <div class="form-group">
+                  <label class="sr-only">Title</label>
+                  <input type="text" class="form-control" id="title" value="{{posts.judul}}" name="judul">
+                </div>
+                <div class="form-group">
+                  <label class="sr-only">Tags</label>
+                  <select data-placeholder="Pilih Category" multiple name="tags" class="form-control chosen-select">
+                    <option></option>
+                    <option>Teknologi</option>
+                    <option>Lowongan Kerja</option>
+                    <option>Beasiswa</option>
+                    <option>Berita</option>
+                    <option>Film</option>
+                    <option>Musik</option>
 
-                  </tr>
-                </thead>
-                <tbody>
-                    {% for data in Article %}
-                  <tr>
-                    <td>{{ data.judul}}</td>
-                    <td>20</td>
-                    <td>2 days ago</td>
-                    <td>
-                      <a href="/Edit/{{data._id}}" class="btn btn-xs btn-warning EditArticle" role="button" id="{{data._id}}">edit</a>
-                      <a href="#" class="btn btn-xs btn-danger deleteArticle" role="button" 
-                      id="{{data._id}}">del</a>
-                    </td>
-                  </tr>
-{%endfor%}
-                </tbody>
-              </table>
-              
+
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="sr-only">Article</label>
+                  <textarea class="form-control summernote" value="{{posts.article}}" name="article"></textarea>
+                </div>
+                <div class="checkbox">
+                  <label for="">
+                    <input type="checkbox"> pulbish article whe i click on save
+                  </label>
+                </div>
+                <div class="clearfix">
+                  <button type="submit" class="btn btn-primary pull-right">Save / Publish</button>
+                </div>
+              </form>
             </div>
           </div>
-          <div class="col-md-6 dashboard-right-cel"></div>
-        </div>
-        <div class="row">
-          
         </div>
 
         <div class="row">
@@ -187,7 +189,27 @@
     <script src="js/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
-   
     <script type="text/javascript" src="js/javascript.js"></script>
+    <script type="text/javascript" src="choosen/chosen.jquery.js"></script>
+    <script type="text/javascript" src="summernote/summernote-master/dist/summernote.min.js"></script>
+    <script type="text/javascript">
+    var config = {
+      '.chosen-select':{},
+      '.chosen-select-deselect': {allow_single_deselect: true},
+      '.chosen-select-no-single':{disable_search_threshold: 10},
+      '.chosen-select-no-result': {no_result_text : 'Oops, nothing found!'},
+      '.chosen-select-width': {width: "95%"}
+    }
+    for (var selector in config){
+      $(selector).chosen(config[selector]);
+    }
+    </script>
+
+    <script type="text/javascript">
+    $('.summernote').summernote({
+      height:200
+    })
+    </script>
+
   </body>
 </html>

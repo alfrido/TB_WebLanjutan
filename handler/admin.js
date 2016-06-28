@@ -1,6 +1,6 @@
 var moment = require('moment'),
 	handler, 
-	Objectid=require('mongodb').Objectid,
+	ObjectId=require('mongodb').ObjectId,
 	MongoClient = require('mongodb').MongoClient,
 
 	admin;
@@ -12,6 +12,50 @@ MongoClient.connect('mongodb://user1:user1@ds023213.mlab.com:23213/projectfahrid
   	if (err) return console.log(err)
   	db = database;
 });
+
+var deleteArticle = function(req, res){
+	console.log(req.params.id);
+
+	db.collection('data').findOneAndDelete({ "_id" : ObjectId(req.params.id)}, (function(err, result){
+		if(err)return console.log(err);
+		res.sendStatus(204);
+	}))
+};
+
+
+var EditArticle = function(req, res){
+	db.collection('Article').findOne(
+	{
+		"_id": ObjectId(req.params.id)
+
+	},function(err, result){
+			if (err) return res.send("Error Occurent");
+			else{
+				var data = result;
+				res.render('./admin/Edit.html', {posts: data})
+	//			res.sendStatus(204);
+			}
+	});
+	//res.sendStatus(204);
+};
+var edit = function(req,res){
+	db.collection('data')
+	  .findOneAndUpdate({ "_id" : ObjectId(req.body.id)}, {
+	    $set: {
+	        judul: req.body.judul,
+	        tags: req.body.tags,
+	        article: req.body.article
+      		
+	    }
+	  }, {
+	    sort: {_id: -1},
+	    upsert: true
+	  }, function(err, result)  {
+	    if (err) return res.send(err);
+	    console.log(result);
+	    res.redirect('/home');
+	  })
+};
 
 /*var editPost=function(req,res){
 	db.collection('post').findOne{
@@ -71,7 +115,10 @@ handler = {
 	commenters:commenters,
 	setting:setting,
 	login:login,
-	home1:home1
+	home1:home1,
+	EditArticle:EditArticle,
+	edit:edit,
+	deleteArticle:deleteArticle
 };
 
 module.exports = handler;
