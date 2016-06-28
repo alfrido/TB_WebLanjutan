@@ -29,7 +29,7 @@
     function login() {
       FB.login(function(response) {
         if (response.status === 'connected') {
-           /* document.getElementById('status').innerHTML = 'We are connected.';
+            /*document.getElementById('status').innerHTML = 'We are connected.';
             document.getElementById('login').style.visibility = 'hidden';*/
       FB.api('/me', 'GET', {fields: 'birthday,email,id,religion,gender,name,about,picture.width(150).height(150)'}, function(response) {
         document.getElementById('status').innerHTML = "<img src='" + response.picture.data.url+ "'>" ,

@@ -1,7 +1,7 @@
 //TODO: consider deprecating and using multibar with single series for this
 nv.models.historicalBar = function() {
   "use strict";
-  //============================================================
+  //        ====
   // Public Variables with Default Settings
   //------------------------------------------------------------
 
@@ -26,7 +26,7 @@ nv.models.historicalBar = function() {
     , interactive = true
     ;
 
-  //============================================================
+  //        ====
 
 
   function chart(selection) {
@@ -205,7 +205,7 @@ nv.models.historicalBar = function() {
               .classed("hover", false)
                ;
   };
-  //============================================================
+  //        ====
   // Expose Public Variables
   //------------------------------------------------------------
 
@@ -324,7 +324,7 @@ nv.models.historicalBar = function() {
     return chart;
   };
 
-  //============================================================
+  //        ====
 
 
   return chart;

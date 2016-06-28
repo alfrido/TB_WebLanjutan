@@ -141,6 +141,7 @@
               </header>
               <table class="table table-striped">
                 <thead>
+
                   <tr>
                     <th>title</th>
                     <th>replies</th>
@@ -150,8 +151,9 @@
                   </tr>
                 </thead>
                 <tbody>
+                    {% for data in Article %}
                   <tr>
-                    <td>My firs post if many to come..</td>
+                    <td>{{ data.judul}}</td>
                     <td>20</td>
                     <td>2 days ago</td>
                     <td>
@@ -160,36 +162,7 @@
                       <a href="#" class="btn btn-xs btn-danger" role="button">del</a>
                     </td>
                   </tr>
-                  <tr>
-                    <td>My firs post if many to come..</td>
-                    <td>20</td>
-                    <td>2 days ago</td>
-                    <td>
-                      <a href="#" class="btn btn-xs btn-warning" role="button">edit</a>
-                      <a href="#" class="btn btn-xs btn-primary" role="button">view</a>
-                      <a href="#" class="btn btn-xs btn-danger" role="button">del</a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>My firs post if many to come..</td>
-                    <td>20</td>
-                    <td>2 days ago</td>
-                    <td>
-                      <a href="#" class="btn btn-xs btn-warning" role="button">edit</a>
-                      <a href="#" class="btn btn-xs btn-primary" role="button">view</a>
-                      <a href="#" class="btn btn-xs btn-danger" role="button">del</a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>My firs post if many to come..</td>
-                    <td>20</td>
-                    <td>2 days ago</td>
-                    <td>
-                      <a href="#" class="btn btn-xs btn-warning" role="button">edit</a>
-                      <a href="#" class="btn btn-xs btn-primary" role="button">view</a>
-                      <a href="#" class="btn btn-xs btn-danger" role="button">del</a>
-                    </td>
-                  </tr>
+{%endfor%}
                 </tbody>
               </table>
               

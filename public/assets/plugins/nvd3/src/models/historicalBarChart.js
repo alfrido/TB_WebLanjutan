@@ -1,7 +1,7 @@
 
 nv.models.historicalBarChart = function() {
   "use strict";
-  //============================================================
+  //        ====
   // Public Variables with Default Settings
   //------------------------------------------------------------
 
@@ -42,10 +42,10 @@ nv.models.historicalBarChart = function() {
     .orient( (rightAlignYAxis) ? 'right' : 'left')
     ;
 
-  //============================================================
+  //        ====
 
 
-  //============================================================
+  //        ====
   // Private Variables
   //------------------------------------------------------------
 
@@ -72,7 +72,7 @@ nv.models.historicalBarChart = function() {
     nv.tooltip.show([left, top], content, null, null, offsetElement);
   };
 
-  //============================================================
+  //        ====
 
 
   function chart(selection) {
@@ -228,7 +228,7 @@ nv.models.historicalBarChart = function() {
       //------------------------------------------------------------
 
 
-      //============================================================
+      //        ====
       // Event Handling/Dispatching (in chart's scope)
       //------------------------------------------------------------
 
@@ -279,7 +279,7 @@ nv.models.historicalBarChart = function() {
         chart.update();
       });
 
-      //============================================================
+      //        ====
 
     });
 
@@ -287,7 +287,7 @@ nv.models.historicalBarChart = function() {
   }
 
 
-  //============================================================
+  //        ====
   // Event Handling/Dispatching (out of chart's scope)
   //------------------------------------------------------------
 
@@ -304,10 +304,10 @@ nv.models.historicalBarChart = function() {
     if (tooltips) nv.tooltip.cleanup();
   });
 
-  //============================================================
+  //        ====
 
 
-  //============================================================
+  //        ====
   // Expose Public Variables
   //------------------------------------------------------------
 
@@ -412,7 +412,7 @@ nv.models.historicalBarChart = function() {
     return chart;
   };
 
-  //============================================================
+  //        ====
 
 
   return chart;

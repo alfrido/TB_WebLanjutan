@@ -1,7 +1,7 @@
 
 nv.models.stackedArea = function() {
   "use strict";
-  //============================================================
+  //        ====
   // Public Variables with Default Settings
   //------------------------------------------------------------
 
@@ -40,7 +40,7 @@ nv.models.stackedArea = function() {
    *   'default' (input order)
    ************************************/
 
-  //============================================================
+  //        ====
 
 
   function chart(selection) {
@@ -196,7 +196,7 @@ nv.models.stackedArea = function() {
 
 
 
-      //============================================================
+      //        ====
       // Event Handling/Dispatching (in chart's scope)
       //------------------------------------------------------------
 
@@ -207,7 +207,7 @@ nv.models.stackedArea = function() {
         g.select('.nv-chart-' + id + ' .nv-area-' + e.seriesIndex).classed('hover', false);
       });
 
-      //============================================================
+      //        ====
       //Special offset functions
       chart.d3_stackedOffset_stackPercent = function(stackData) {
           var n = stackData.length,    //How many series
@@ -239,7 +239,7 @@ nv.models.stackedArea = function() {
   }
 
 
-  //============================================================
+  //        ====
   // Event Handling/Dispatching (out of chart's scope)
   //------------------------------------------------------------
 
@@ -254,9 +254,9 @@ nv.models.stackedArea = function() {
         dispatch.tooltipHide(e);
   });
 
-  //============================================================
+  //        ====
 
-  //============================================================
+  //        ====
   // Global getters and setters
   //------------------------------------------------------------
 
@@ -361,7 +361,7 @@ nv.models.stackedArea = function() {
 	    interpolate = _;
 	    return chart;
   };
-  //============================================================
+  //        ====
 
 
   return chart;

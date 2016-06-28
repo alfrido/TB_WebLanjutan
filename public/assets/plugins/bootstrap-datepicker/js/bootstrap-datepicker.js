@@ -1,7 +1,7 @@
-/* =========================================================
+/*         =
  * bootstrap-datepicker.js
  * http://www.eyecon.ro/bootstrap-datepicker
- * =========================================================
+ *         =
  * Copyright 2012 Stefan Petre
  * Improvements by Andrew Rowls
  *
@@ -16,7 +16,7 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- * ========================================================= */
+ *         = */
 
 (function( $ ) {
 
@@ -1366,7 +1366,7 @@
 
 
 	/* DATEPICKER NO CONFLICT
-	* =================== */
+	*   ===== */
 
 	$.fn.datepicker.noConflict = function(){
 		$.fn.datepicker = old;
@@ -1375,7 +1375,7 @@
 
 
 	/* DATEPICKER DATA-API
-	* ================== */
+	*   ==== */
 
 	$(document).on(
 		'focus.datepicker.data-api click.datepicker.data-api',

@@ -9,7 +9,8 @@ var express = require('express'),
 	router;
 
 
-MongoClient.connect('mongodb://user1:user1@ds023213.mlab.com:23213/projectfahridb', (err, database) => {
+MongoClient.connect('mongodb://user1:user1@ds023213.mlab.com:23213/projectfahridb', function(err, database) {
+ 
   	if (err) return console.log(err)
   	db = database;
 })
@@ -26,6 +27,21 @@ router = function(app){
 				res.redirect('/');
 			})
 		});
+	r.post('/AddArticle',
+		(req, res) => {
+			db.collection('Article').save(req.body,(err, result) => {
+				if (err) return console.log(err);
+				//renders index.ejs
+				console.log('saved to database');
+				res.redirect('/home');
+			})
+		});
+	app.get('/home', (req, res) => {
+  db.collection('Article').find().toArray((err, result) => {
+    if (err) return console.log(err)
+    res.render('./admin/homeadmin.html', {Article: result})
+  })
+});
 	r.get('/approved',h.approved);
 	r.get('/articles',h.articles);
 	r.get('/articlebaru',h.articlebaru);

@@ -1,6 +1,28 @@
 var moment = require('moment'),
 	handler, 
+	Objectid=require('mongodb').Objectid
 	admin;
+
+
+
+MongoClient.connect('mongodb://user1:user1@ds023213.mlab.com:23213/projectfahridb', function(err, database) {
+ 
+  	if (err) return console.log(err)
+  	db = database;
+});
+
+/*var editPost=function(req,res){
+	db.collection('post').findOne{
+		"_id":Objectid(req.params.id)
+	},function(err,result){
+		if(err) return res.send("error");
+		else{
+			var data=result;
+			res.render("./admin/edit disini")
+		}
+	}
+};*/
+
 approved = function(req, res){
 	res.render('./admin/approved.html');
 };
