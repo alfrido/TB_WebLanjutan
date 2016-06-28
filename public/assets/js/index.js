@@ -1,5 +1,10 @@
 var Index = function() {"use strict";
 
+$(".hover").mouseleave(
+  function () {
+    $(this).removeClass("hover");
+  }
+);
 	// function to initiate Chart 1
 	var runChart1 = function() {
 		function randValue() {

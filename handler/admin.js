@@ -1,6 +1,8 @@
 var moment = require('moment'),
 	handler, 
-	Objectid=require('mongodb').Objectid
+	Objectid=require('mongodb').Objectid,
+	MongoClient = require('mongodb').MongoClient,
+
 	admin;
 
 
