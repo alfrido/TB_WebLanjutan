@@ -2,6 +2,7 @@
 Goal : Membangun Web dengan Menggunakan API dan Java Script
 
 #Rancangan Web
+<<<<<<< HEAD
 - Nama Website : PunyaMahasiswa.com
 - Deskripsi:
   - Berhubungan dengan mahasiswa
@@ -19,5 +20,11 @@ Goal : Membangun Web dengan Menggunakan API dan Java Script
     - Informasi terkini seputar komunitas yang lagi "hit" di kalangan mahasiwa
   - Inspirasi
     - Berisi informasi tentang tokoh/sosok yang layak dijadikan inspirasi mahasiswa 
+=======
+- Nama Website : We.com
+- Deskripsi:
+  - Berhubungan dengan forum
+  - Informasi tentang tranding topic, new, film, music, lowongan kerja, dsb
+>>>>>>> f3ed96a8be81970ac1cbf7d98711991fe35ef856
 
 #Ganbatte !!!
