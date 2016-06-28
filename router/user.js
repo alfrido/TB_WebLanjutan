@@ -4,6 +4,15 @@ var express = require('express'),
 	router;
 
 router = function(app){
+	r.post('/PostUser',
+		(req, res) => {
+			db.collection('PostUser').save(req.body,(err, result) => {
+				if (err) return console.log(err);
+				//renders index.ejs
+				console.log('saved to database');
+				res.redirect('/');
+			})
+		});
 	r.get('/', h.home);
 	r.get('/fb', h.fb);
 	r.get('/berita', h.berita);
@@ -34,6 +43,7 @@ router = function(app){
 	r.get('/rm2tekno', h.rm2tekno);
 	r.get('/rm3tekno', h.rm3tekno);
 	r.get('/lowongan', h.lowongan);
+	r.get('/profile', h.Profile);
 	/*r.get('/logout', function (req, res) {
 		req.session.user = "";
 	  res.redirect('/');

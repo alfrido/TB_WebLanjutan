@@ -92,6 +92,9 @@ rm2tips=function(req, res){
 rm3tips=function(req, res){
 	res.render('./user/rm3tips.html');
 };
+Profile=function(req, res){
+	res.render('./user/ProfileUser.html');
+};
 
 /*login = function(req, res){
 	user = req.session.user || "";
@@ -146,7 +149,8 @@ handler = {
 	rm3musik:rm3musik,
 	rm1tips:rm1tips,
 	rm2tips:rm2tips,
-	rm3tips:rm3tips
+	rm3tips:rm3tips,
+	Profile:Profile
 	/*login: login,
 	check: check*/
 };
